@@ -4,15 +4,19 @@ set encoding=utf-8
 let python_highlight_all=1
 syntax on
 set number
+set autoindent " Preserve current indent on new lines
+set cindent " set C style indent
+set expandtab " Convert all tabs typed to spaces
+set softtabstop=4 " Indentation levels every four columns
+set shiftwidth=4 " Indent/outdent by four columns
+set shiftround " Indent/outdent to nearest tabstop
 set nocompatible              " required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 " add all your plugins here (note older versions of Vundle
@@ -30,12 +34,6 @@ Plugin 'vim-flake8'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
-set autoindent " Preserve current indent on new lines
-set cindent " set C style indent
-set expandtab " Convert all tabs typed to spaces
-set softtabstop=4 " Indentation levels every four columns
-set shiftwidth=4 " Indent/outdent by four columns
-set shiftround " Indent/outdent to nearest tabstop
 let g:indentLine_setColors = 1
 "let g:indentLine_loaded = 1
 let g:indentLine_color_term = 249
